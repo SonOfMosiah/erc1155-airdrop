@@ -1,16 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol";
-import "openzeppelin-contracts/contracts/security/ReentrancyGuard.sol";
-import "openzeppelin-contracts/contracts/utils/Multicall.sol";
-import "openzeppelin-contracts/contracts/access/Ownable.sol";
-import "src/IAirdropERC1155.sol";
+import { IERC1155 } from "openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol";
+import { ReentrancyGuard } from "openzeppelin-contracts/contracts/security/ReentrancyGuard.sol";
+import { Multicall }  from "openzeppelin-contracts/contracts/utils/Multicall.sol";
+import { Ownable } from "openzeppelin-contracts/contracts/access/Ownable.sol";
+import { IAirdropERC1155 } from "src/IAirdropERC1155.sol";
 
 contract AirdropERC1155 is Ownable, ReentrancyGuard, Multicall, IAirdropERC1155 {
     error InvalidArrayLength();
-
-    constructor() {}
 
     /**
      *  @notice          Lets contract-owner send ERC1155 tokens to a list of addresses.

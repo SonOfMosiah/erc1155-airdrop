@@ -11,3 +11,4 @@ optimizer = true
 [etherscan]
 mainnet = { key = "${ETHERSCAN_API_KEY}" }
 goerli = { key = "${ETHERSCAN_API_KEY}" }
+polygon = { ley = "${POLYGONSCAN_API_KEY}" }
