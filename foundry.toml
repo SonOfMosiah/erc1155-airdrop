@@ -5,10 +5,9 @@ libs = ['lib']
 solc-version = "0.8.20"
 via_ir = true
 optimizer = true
+evm_version = "berlin"
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
 
 [etherscan]
-mainnet = { key = "${ETHERSCAN_API_KEY}" }
-goerli = { key = "${ETHERSCAN_API_KEY}" }
-polygon = { ley = "${POLYGONSCAN_API_KEY}" }
+polygon = { key = "${POLYGONSCAN_API_KEY}" }

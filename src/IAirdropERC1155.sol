@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.19;
 
 interface IAirdropERC1155 {
     /**
@@ -29,14 +29,8 @@ interface IAirdropERC1155 {
      *  @param _tokenAddress    ERC1155 contract address
      *  @param _sender      Address of the sender
      *  @param _recipients      Airdrop recipients
-     *  @param _amounts         Amount of tokens to airdrop to each recipient
      *  @param _tokenId        TokenId to airdrop
      */
-    function airdropSingle(
-        address _tokenAddress,
-        address _sender,
-        address[] memory _recipients,
-        uint256[] memory _amounts,
-        uint256 _tokenId
-    ) external;
+    function airdropSingle(address _tokenAddress, address _sender, address[] memory _recipients, uint256 _tokenId)
+        external;
 }
